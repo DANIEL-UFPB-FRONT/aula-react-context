@@ -1,11 +1,8 @@
-import { useContext } from 'react';
-import { TimerContext } from '../context/TimerContext';
-function Timer({ fuseName, fuseStep }) {
-  const { hour, minute, second } = useContext(TimerContext);
+function Timer({ dateInfo, fuseName, fuseStep }) {
   return (
-    <div>{`Fuse Zone: ${fuseName} with time ${
-      hour + fuseStep
-    }:${minute}:${second}`}</div>
+    <div>{`Fuse Zone: ${fuseName} with time ${dateInfo.hour + fuseStep}:${
+      dateInfo.minute
+    }:${dateInfo.second}`}</div>
   );
 }
 

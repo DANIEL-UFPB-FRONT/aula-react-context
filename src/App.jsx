@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { TimerContext } from './context/TimerContext';
 import Timer from './components/Timer';
 import './App.css';
 
@@ -24,15 +23,15 @@ function App() {
   }, []);
 
   return (
-    <TimerContext.Provider value={dateInfo}>
+    <>
       <hr />
-      <Timer fuseName={'UTC'} fuseStep={0} />
+      <Timer fuseName={'UTC'} fuseStep={0} dateInfo={dateInfo} />
       <hr />
-      <Timer fuseName={'Brasília'} fuseStep={-3} />
+      <Timer fuseName={'Brasília'} fuseStep={-3} dateInfo={dateInfo} />
       <hr />
-      <Timer fuseName={'Moscow'} fuseStep={+3} />
+      <Timer fuseName={'Moscou'} fuseStep={+3} dateInfo={dateInfo} />
       <hr />
-    </TimerContext.Provider>
+    </>
   );
 }
 
