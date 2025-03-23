@@ -28,7 +28,7 @@
     "git-commit-msg-linter": "^4.11.1",
     "husky": "^8.0.3",
     "prettier": "^2.8.8",
-    "vite": "^4.3.2"
+    "vite": "^6.2.2"
   },
   "config": {
     "commitizen": {
